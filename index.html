@@ -3,81 +3,252 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakshi | Full-Stack Developer</title>
+  <title>Sakshi | Full-Stack Developer (MERN) | React, Node.js, Python, Gen AI</title>
+  <meta name="description" content="Sakshi is a Full-Stack Developer skilled in the MERN stack, Python and Generative AI integration. See projects like PrepAI and RozgarSaathi." />
+  <meta name="theme-color" content="#050a1c" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Go to top">
       <span class="brand-dot"></span>
       <div>
         <p>Portfolio</p>
         <strong>Sakshi</strong>
       </div>
-    </div>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="page-shell">
-    <section class="hero" id="home">
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="glow glow-blue"></div>
+      <div class="glow glow-gold"></div>
+
       <div class="hero-copy">
-        <span class="eyebrow">Full-Stack Developer</span>
-        <h1>Hi, I’m Sakshi.</h1>
-        <p class="hero-tag">GitHub: <a href="https://github.com/SakshiCode731" target="_blank" rel="noreferrer">SakshiCode731</a></p>
-        <p class="hero-text">I build premium websites and web apps with modern HTML and CSS, powered by JavaScript and a scalable back-end stack. I create polished user experiences that look professional, feel fast, and work beautifully across devices.</p>
+        <span class="eyebrow"><i class="pulse"></i> Open to full-time roles &amp; internships</span>
+        <h1>Hi, I’m <span class="gradient-text">Sakshi.</span></h1>
+        <p class="typed-line">I build <span id="typed"></span><span class="cursor">|</span></p>
+        <p class="hero-text">
+          Full-Stack Developer focused on the MERN stack, Python and Gen AI integration.
+          I create fast, polished web apps with clean UI and reliable back-ends that work beautifully across devices.
+        </p>
 
         <div class="hero-buttons">
           <a class="btn btn-primary" href="Sakshi_Gautam_Resume.pdf" download>Download Resume</a>
-          <a class="btn btn-hire" href="contact.html">Hire Me</a>
-          <a class="btn btn-secondary" href="contact.html">Contact Me</a>
+          <a class="btn btn-hire" href="#contact">Hire Me</a>
+          <a class="btn btn-secondary" href="#projects">View Projects</a>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/SakshiCode731" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/sakshi-gautam-9317292b9/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:gautamsakshi166@gmail.com">Email</a>
         </div>
       </div>
 
-      <div class="hero-panel">
+      <div class="hero-panel reveal">
         <div class="hero-photo">
           <img src="profile.jpg" alt="Sakshi profile photo" />
         </div>
+        <span class="float-chip chip-a">React.js</span>
+        <span class="float-chip chip-b">Node.js</span>
+        <span class="float-chip chip-c">Gen AI</span>
         <div class="hero-info">
           <p class="hero-info-title">Role</p>
-          <p>Full-Stack Developer</p>
-          <p class="hero-info-title">Skills</p>
-          <p>HTML · CSS · JavaScript · Node.js · Express.js · MongoDB · Git & GitHub</p>
+          <p>Full-Stack Developer (MERN)</p>
+          <p class="hero-info-title">Core stack</p>
+          <p>React · Node.js · Express · MongoDB · Python</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK HIGHLIGHTS -->
+    <section class="highlights section reveal">
+      <div class="highlight"><strong>MERN</strong><span>Full-stack apps, end to end</span></div>
+      <div class="highlight"><strong>Gen AI</strong><span>LLM API integration (Groq)</span></div>
+      <div class="highlight"><strong>DSA</strong><span>Regular practice on LeetCode</span></div>
+      <div class="highlight"><strong>CI/CD</strong><span>GitHub Actions &amp; Vercel</span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <span class="eyebrow">About me</span>
+        <h2>Learning by building real things</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I’m a B.Tech Information Technology student who started with frontend (HTML, CSS, Tailwind, JavaScript)
+            and grew into full-stack development with React.js, Node.js, Express.js and MongoDB.
+          </p>
+          <p>
+            I’m now exploring applied AI: building features with LLM APIs, prompt engineering, RAG and AI agent concepts.
+            I also keep my problem-solving sharp with Python, C++ and consistent DSA practice.
+          </p>
+          <p>
+            I use tools like Claude and ChatGPT to debug and prototype faster, and I make sure I understand every line I ship.
+          </p>
+        </div>
+
+        <div class="about-card reveal">
+          <p class="card-label">Education</p>
+          <h3>B.Tech, Information Technology</h3>
+          <p class="muted">G. H. Raisoni College of Engineering, Nagpur · 3rd Year</p>
+          <hr />
+          <p class="card-label">Looking for</p>
+          <p>Full-Stack, React, Frontend and AI-integrated product roles, including internships and full-time opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <span class="eyebrow">Skills</span>
+        <h2>Tools I work with</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <h3>Frontend</h3>
+          <div class="chips">
+            <span>React.js</span><span>JavaScript (ES6+)</span><span>Tailwind CSS</span><span>HTML5</span><span>CSS3</span><span>Vite</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3>Backend &amp; Database</h3>
+          <div class="chips">
+            <span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>JWT Auth</span><span>MVC</span><span>MongoDB</span><span>Mongoose</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3>Generative AI</h3>
+          <div class="chips">
+            <span>LLM API Integration (Groq)</span><span>Prompt Engineering</span><span>RAG</span><span>AI Agents</span><span>Claude</span><span>ChatGPT</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3>Python &amp; ML</h3>
+          <div class="chips">
+            <span>Python</span><span>NumPy</span><span>Pandas</span><span>scikit-learn</span>
+            <span class="soft">LangChain (familiar)</span><span class="soft">Vector DBs (familiar)</span><span class="soft">Hugging Face (familiar)</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3>Languages &amp; DSA</h3>
+          <div class="chips">
+            <span>Python</span><span>C++</span><span>JavaScript</span><span>C++ STL</span><span>LeetCode</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3>Engineering &amp; Tools</h3>
+          <div class="chips">
+            <span>Git</span><span>GitHub</span><span>GitHub Actions (CI/CD)</span><span>Automated Testing</span><span>Postman</span><span>Sentry</span><span>Vercel</span><span>VS Code</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <span class="eyebrow">Projects</span>
+        <h2>Proof of work</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="badge">Featured · AI</span>
+            <h3>PrepAI</h3>
+          </div>
+          <p>
+            AI-powered interview prep platform that assesses interview readiness and identifies skill gaps for students.
+            Built as a full-stack MERN app with LLM integration for AI-driven feedback.
+          </p>
+          <div class="chips small">
+            <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Groq LLM API</span><span>Prompt Engineering</span>
+          </div>
+          <div class="project-links">
+            <!-- TODO: replace with the PrepAI repo link and live link -->
+            <a class="btn btn-primary" href="https://github.com/SakshiCode731" target="_blank" rel="noreferrer">GitHub</a>
+            <!-- <a class="btn btn-secondary" href="YOUR_LIVE_LINK" target="_blank" rel="noreferrer">Live Demo</a> -->
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="badge">Featured · Full-Stack</span>
+            <h3>RozgarSaathi</h3>
+          </div>
+          <p>
+            Hyperlocal gig-matching platform that connects people with nearby work.
+            Includes real-time job updates and secure JWT-based authentication.
+          </p>
+          <div class="chips small">
+            <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT Auth</span><span>Real-time updates</span>
+          </div>
+          <div class="project-links">
+            <!-- TODO: replace with the RozgarSaathi repo link and live link -->
+            <a class="btn btn-primary" href="https://github.com/SakshiCode731" target="_blank" rel="noreferrer">GitHub</a>
+            <!-- <a class="btn btn-secondary" href="YOUR_LIVE_LINK" target="_blank" rel="noreferrer">Live Demo</a> -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="contact-card reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let’s build something great together</h2>
+        <p>
+          I’m open to full-time roles, internships and collaborations in Full-Stack, React, Frontend and AI-integrated development.
+        </p>
+        <div class="hero-buttons center">
+          <a class="btn btn-primary" href="mailto:gautamsakshi166@gmail.com">Email Me</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/sakshi-gautam-9317292b9/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/SakshiCode731" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-branding">
+    <div>
       <p class="footer-brand">Sakshi — Full-Stack Developer</p>
-      <p class="footer-copy">Freelance-ready web development with clean HTML, polished CSS, and modern JavaScript.</p>
+      <p class="footer-copy">MERN · Python · Gen AI integration</p>
     </div>
-    <!-- <div class="footer-links">
-      <!-- <div>
-        <p class="footer-heading">Explore</p>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div>
-        <p class="footer-heading">Contact</p>
-        <a href="mailto:gautamsakshi166@gmail.com">Email</a>
-        <a href="https://github.com/SakshiCode731" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/sakshi-gautam-9317292b9/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div> -->
-    <!-- </div> --> 
-    <div class="footer-notice">
-      <p>© 2026 Sakshi. Crafted for modern web presence.</p>
-    </div>
+    <p class="footer-notice">© <span id="year">2026</span> Sakshi. All rights reserved.</p>
   </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+  <script src="script.js"></script>
 </body>
 </html>
